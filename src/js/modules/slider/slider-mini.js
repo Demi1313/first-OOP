@@ -60,13 +60,11 @@ export default class MiniSlider extends Slider {
 
         Array.from(this.slides).forEach(slide => {
             slide.addEventListener('mouseenter', () => {
-                console.log('маусэнтер');
                 clearInterval(play);
             });
 
             slide.addEventListener('mouseleave', () => {
                 this.activateAnimation();
-                console.log('мауслив');
             });
         });
     }
