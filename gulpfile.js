@@ -4,8 +4,8 @@ const gulp = require("gulp");
 const webpack = require("webpack-stream");
 const browsersync = require("browser-sync");
 
-// const dist = "./dist/";
-const dist = "/ospanel/domains/js-project"; 
+const dist = "./dist/";
+// const dist = "/ospanel/domains/js-project"; 
 // Ссылка на вашу папку на локальном сервере
 
 gulp.task("copy-html", () => {

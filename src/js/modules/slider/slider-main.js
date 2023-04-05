@@ -51,7 +51,9 @@ export default class MainSlider extends Slider {
                     this.plusSlides(1);
                 });
             }
+            
             btn.parentNode.previousElementSibling.addEventListener('click', (e) => {
+                e.stopPropagation();
                 e.preventDefault();
                 this.slideIndex = 1;
                 this.showSlides(this.slideIndex);

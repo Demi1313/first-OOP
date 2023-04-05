@@ -4,13 +4,14 @@ import VideoPlayer from './modules/playVideo.js';
 import Difference from './modules/difference';
 import Form from './modules/forms';
 import Accordion from './modules/accordion';
+import Download from './modules/download';
 
 
 window.addEventListener('DOMContentLoaded', () => {
-    const slider = new MainSlider({btns: '.next', container: '.page'});
+    const slider = new MainSlider({btns: '.sidecontrol .next', container: '.page'});
     slider.render();
 
-    const modulePageSlide = new MainSlider({container: '.moduleapp', btns: '.next', nextSize: '.nextmodule', prevSize: '.prevmodule'});
+    const modulePageSlide = new MainSlider({container: '.moduleapp', btns: '.sidecontrol .next', nextSize: '.nextmodule', prevSize: '.prevmodule'});
     modulePageSlide.render();
 
     const showUpSlider = new MiniSlider({
@@ -48,4 +49,6 @@ window.addEventListener('DOMContentLoaded', () => {
     new Form('.form').init();
 
     new Accordion('.module__info-show .plus').init();
+
+    new Download('.download').init();
 });
